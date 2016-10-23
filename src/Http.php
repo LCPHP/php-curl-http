@@ -10,7 +10,7 @@ class Http {
      * @param string $data_type
      * @return mixed|boolean
      */
-    static public function http_get($url, $data_type='json') {
+    static public function get($url, $data_type='json') {
     
         $cl = curl_init();
         if(stripos($url, 'https://') !== FALSE) {
@@ -40,7 +40,7 @@ class Http {
      * @param string $data_type
      * @return mixed|boolean
      */
-    static public function http_post($url, $fields, $data_type='json') {
+    static public function post($url, $fields, $data_type='json') {
     
         $cl = curl_init();
         if(stripos($url, 'https://') !== FALSE) {
